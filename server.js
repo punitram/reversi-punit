@@ -88,7 +88,7 @@ io.on('connection', (socket) => {
             response = {};
             response.result = 'fail';
             response.message ='client did not send a payload';
-            socket.emit('join_room_response', repsonse);
+            socket.emit('join_room_response', response);
             serverLog('join_room command failed', JSON.stringify(response));
             return;
         }
@@ -98,7 +98,7 @@ io.on('connection', (socket) => {
             response = {};
             response.result = 'fail';
             response.message ='client did not send a valid room to join';
-            socket.emit('join_room_response', repsonse);
+            socket.emit('join_room_response', response);
             serverLog('join_room command failed', JSON.stringify(response));
             return;
         }
@@ -106,7 +106,7 @@ io.on('connection', (socket) => {
             response = {};
             response.result = 'fail';
             response.message ='client did not send a valid username to join the chat room';
-            socket.emit('join_room_response', repsonse);
+            socket.emit('join_room_response', response);
             serverLog('join_room command failed', JSON.stringify(response));
             return;
         }
@@ -122,7 +122,7 @@ io.on('connection', (socket) => {
                 response = {};
                 response.result = 'fail';
                 response.message = 'Server internal error joining chat room';
-                socket.emit('join_riim command failed', JSON.stringify(response));
+                socket.emit('join_room_response command failed', JSON.stringify(response));
             }
             /* Socket did join room */
             else{
@@ -166,7 +166,7 @@ io.on('connection', (socket) => {
                 response = {};
                 response.result = 'fail';
                 response.message ='client did not send a payload';
-                socket.emit('send_chat_message_response', repsonse);
+                socket.emit('send_chat_message_response', response);
                 serverLog('send_chat_message command failed', JSON.stringify(response));
                 return;
             }
@@ -177,7 +177,7 @@ io.on('connection', (socket) => {
                 response = {};
                 response.result = 'fail';
                 response.message ='client did not send a valid room to message';
-                socket.emit('send_chat_message_response', repsonse);
+                socket.emit('send_chat_message_response', response);
                 serverLog('send_chat_message command failed', JSON.stringify(response));
                 return;
             }
@@ -185,7 +185,7 @@ io.on('connection', (socket) => {
                 response = {};
                 response.result = 'fail';
                 response.message ='client did not send a valid username as a message source';
-                socket.emit('send_chat_message_response', repsonse);
+                socket.emit('send_chat_message_response', response);
                 serverLog('send_chat_message command failed', JSON.stringify(response));
                 return;
             }
@@ -193,7 +193,7 @@ io.on('connection', (socket) => {
                 response = {};
                 response.result = 'fail';
                 response.message ='client did not send a valid message';
-                socket.emit('send_chat_message_response', repsonse);
+                socket.emit('send_chat_message_response', response);
                 serverLog('send_chat_message command failed', JSON.stringify(response));
                 return;
             }

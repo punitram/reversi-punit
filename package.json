@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/punitram/reversi-punit#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "node-static": "^0.7.11",
     "socket.io": "^4.7.5"
   }

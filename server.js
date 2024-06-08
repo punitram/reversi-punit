@@ -6,8 +6,8 @@ let static = require('node-static');
 let http = require('http');
 
 /* Assume that we are running on Heroku */
-//let port = process.env.PORT || 8080;
-let port = process.env.PORT;
+//let port = process.env.PORT;
+let port = process.env.PORT || 8080;
 console.log('Using port:', port);
 let directory = __dirname + '/public';
 
@@ -28,7 +28,7 @@ let app = http.createServer(
             }
         ).resume();
     }
-).listen(port);
+).listen(port, '0.0.0.0');
 
 console.log('The server is running');
 

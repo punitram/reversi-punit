@@ -34,7 +34,15 @@ socket.on('log', function(array) {
     console.log.apply(console, array);
 });
 */
+
+/*
 let socket = io('http://localhost:8080');
+socket.on('log',function(array) {
+    console.log.apply(console,array);
+});
+*/
+
+let socket = io();
 socket.on('log',function(array) {
     console.log.apply(console,array);
 });

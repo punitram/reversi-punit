@@ -33,22 +33,18 @@ table#game_board td {
 
 table#game_board td.hovered_over:hover {
     background-color: blueviolet;
-    /*background-image: url('/assets/images/hover.gif');*/
 }
+
 
 /*
 table#game_board td:hover {
     background-color: blueviolet;
 }
-*/
-
-/*
+    
 td.hovered_over:hover {
     background-image: url('/assets/images/hover.gif');
 }
-*/
 
-/*
 td.hovered_over:hover {
     background-image: url('/public/assets/images/hover.gif');
 }
